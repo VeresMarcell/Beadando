@@ -18,4 +18,4 @@ if 1 <= ins <= 100:
         b = int(input('B: '))
         print((lambda a, b: ((a+b)-10) if 1<=b<=10**9 and 1<=b<=10**9 else print('A or B is not in the sufficient interval[1,10^9]'))(a,b))
 else:
-    print('Insufficient numver of instances')
+    print('Insufficient number of instances')
