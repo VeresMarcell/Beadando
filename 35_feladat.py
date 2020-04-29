@@ -6,9 +6,10 @@ def rgb():
             newCol = clr[4:len(clr)-1]
             nums = newCol.split(',')
             newNum =[]
-            for i in range(len(nums)):
-                newNum.append(int(nums[i]))
-            print(newNum)
+            for i in nums:
+                if 0 > int(i) or int(i) > 255:
+                    return False
+            return True
     return False
 
 
