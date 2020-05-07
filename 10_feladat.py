@@ -3,9 +3,9 @@
 # megkapja először a teszt esetek számát (1<=T<=100), majd A és B összeadandó számokat
 # (1<=A,B<=109)
 
-ins = int(input('Number of instances: '))
+ins = int(input('Number of instances: '))   #Esetszám beolvasása és vizsgálata
 if 1 <= ins <= 100:
-    for i in range(ins):
+    for i in range(ins):    #Számok beolvasása azok vizsgálata és hibás eredmény kiírása
         a = int(input('A: '))
         b = int(input('B: '))
         print((lambda a, b: ((a+b)-10) if 1<=a<=10**9 and 1<=b<=10**9 else 'A or B is not in the sufficient interval[1,10^9]')(a,b))
