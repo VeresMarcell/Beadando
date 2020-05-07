@@ -22,16 +22,16 @@ def printScore(file):
 guess = 15
 
 while True:
-    menu = ['New Game (N)', 'Score (S)', 'Difficulty (D)(Easy by default)', 'Quit (Q)']
+    menu = ['New Game (N)', 'Score (S)', 'Difficulty (D)(Easy by default)', 'Quit (Q)']     #Menüpontok kiíratása
     for i in menu:
         print(i)
-    click = input('Which option do you choose?>> ')
+    click = input('Which option do you choose?>> ')     #User választása
     click = click.lower()
     scr = 1
-    if click == 'n':
+    if click == 'n':        #User Választásának vizsgálata
         n = random.randint(1,100)
         inp = int(input("Write your guess>> "))
-        while guess > 1:
+        while guess > 1:        #Próbálkozások/pontok számlálása és vizsgálata
             guess -= 1
             scr += 1
             if inp > n:
@@ -47,12 +47,12 @@ while True:
                 break
         if guess == 1:
             print('You are out of tries')
-    if click == 's':
+    if click == 's':        #pontok kiíratása
         score = open('Score.txt','r')
         print('Your scores are>>\n'+printScore(score))
         score.close()
     if click == 'd':
-        while True:
+        while True:     #Nehézség kiválasztása és a választás vizsgálata
             try:
                 tmp = int(input('Set your difficulty(easy(1), normal(2), hard(3))>> '))
                 if tmp == 1:
