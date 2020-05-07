@@ -8,6 +8,6 @@ if 1 <= ins <= 100:
     for i in range(ins):
         a = int(input('A: '))
         b = int(input('B: '))
-        print((lambda a, b: ((a+b)-10) if 1<=b<=10**9 and 1<=b<=10**9 else print('A or B is not in the sufficient interval[1,10^9]'))(a,b))
+        print((lambda a, b: ((a+b)-10) if 1<=a<=10**9 and 1<=b<=10**9 else 'A or B is not in the sufficient interval[1,10^9]')(a,b))
 else:
     print('Insufficient number of instances')
