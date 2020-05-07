@@ -8,14 +8,15 @@ def printScore(file):
         sc += (line)
     return sc
 
+guess = 15
 
 while True:
-    menu = ['New Game (N)', 'Score (S)', 'Difficulty (D)', 'Quit (Q)']
+    menu = ['New Game (N)', 'Score (S)', 'Difficulty (D)(Easy by default)', 'Quit (Q)']
     for i in menu:
         print(i)
     click = input('Which option do you choose?>> ')
     click = click.lower()
-    guess = 5
+    # guess = 15
     scr = 1
     if click == 'n':
         n = random.randint(1,100)
@@ -40,5 +41,30 @@ while True:
         score = open('Score.txt','r')
         print('Your scores are>>\n'+printScore(score))
         score.close()
+    if click == 'd':
+        while True:
+            try:
+                tmp = int(input('Set your difficulty(easy(1), normal(2), hard(3))>> '))
+                if tmp == 1:
+                    guess = 15
+                    sett = ('Difficulty is now set to {} tries').format(guess)
+                    print(sett)
+                    break
+                elif tmp == 2:
+                    guess = 10
+                    sett = ('Difficulty is now set to {} tries').format(guess)
+                    print(sett)
+                    break
+                elif tmp == 3:
+                    guess = 5
+                    sett = ('Difficulty is now set to {} tries').format(guess)
+                    print(sett)
+                    break
+                else:
+                    print('Please give a valid difficulty')
+                    continue
+            except ValueError:
+                print('Please give a valid difficulty')
+                continue
     if click == 'q':
         break
