@@ -37,7 +37,8 @@ while True:
                 print(scr-1,file=score)
                 score.close()
                 break
-        print('You are out of tries')
+        if guess == 1:
+            print('You are out of tries')
     if click == 's':
         score = open('Score.txt','r')
         print('Your scores are>>\n'+printScore(score))
