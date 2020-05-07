@@ -11,9 +11,7 @@ def printScore(file):
 guess = 15
 
 while True:
-    guesstmp = guess
-    dud = 'You have {} tries'.format(guesstmp)
-    menu = ['New Game (N)', 'Score (S)', 'Difficulty (D)({})'.format(dud), 'Quit (Q)']
+    menu = ['New Game (N)', 'Score (S)', 'Difficulty (D)(Easy by default)', 'Quit (Q)']
     for i in menu:
         print(i)
     click = input('Which option do you choose?>> ')
@@ -21,7 +19,6 @@ while True:
     scr = 1
     if click == 'n':
         n = random.randint(1,100)
-        print(n)
         inp = int(input("Write your guess>> "))
         while guess > 1:
             guess -= 1
@@ -70,3 +67,5 @@ while True:
                 continue
     if click == 'q':
         break
+    elif click != 'q' and click != 'd' and click != 's' and click != 'n':
+        print('Unsupported input')
