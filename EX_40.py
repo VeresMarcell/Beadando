@@ -11,12 +11,13 @@ def printScore(file):
 guess = 15
 
 while True:
-    menu = ['New Game (N)', 'Score (S)', 'Difficulty (D)(Easy by default)', 'Quit (Q)']
+    guesstmp = guess
+    dud = 'You have {} tries'.format(guesstmp)
+    menu = ['New Game (N)', 'Score (S)', 'Difficulty (D)({})'.format(dud), 'Quit (Q)']
     for i in menu:
         print(i)
     click = input('Which option do you choose?>> ')
     click = click.lower()
-    # guess = 15
     scr = 1
     if click == 'n':
         n = random.randint(1,100)
