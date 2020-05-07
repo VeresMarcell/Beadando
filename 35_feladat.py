@@ -1,3 +1,9 @@
+# 34. Készítsen programot, amely eldönti egy bemeneti string-ről, hogy az helyes RGB(A) CSS
+# szín-e.
+# A feltételek a következők: a string úgy kezdődik, hogy rgb vagy rgba. Ha rgb akkor 3 szám
+# szerepel a zárójelek között, vesszővel elválasztva [0,255] intervallumon. Ha rgba akkor 4
+# szám, az első 3 a [0,255] intervallumon a negyedik pedig [0,1] intervallumon.
+
 def rgb():
     clr = input('Please enter the RGB(A) CSS colour: ')
     clr = clr.lower()
