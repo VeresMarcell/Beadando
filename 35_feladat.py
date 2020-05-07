@@ -9,7 +9,7 @@ def rgb():
     clr = clr.lower()
     if clr[:3] == 'rgb' or clr[:4] == 'rgba':       #betűk vizsgálata
         if clr[:4] =='rgba':
-            if clr[4] == '(' and clr['-1'] == ')':
+            if clr[4] == '(' and clr['-1'] == ')':      #zárójelek vizsgálata
                 newCol = clr[5:len(clr)-1]      #számok leválasztása
                 nums = newCol.split(',')
                 if len(nums) == 4:      #elég szám van?
@@ -20,7 +20,7 @@ def rgb():
                         return False
                     return True
         elif clr[:3] == 'rgb':      #betűk
-            if clr[3] == '(' and clr[-1] == ')':
+            if clr[3] == '(' and clr[-1] == ')':        #zárójelek vizsgálata
                 newCol = clr[4:len(clr)-1]
                 nums = newCol.split(',')
                 if len(nums) == 3:  #szám
