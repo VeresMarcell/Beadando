@@ -1,3 +1,14 @@
+# 40. Készítsen egy programot, ami választ egy véletlen számot [1,100] intervallumon, majd
+# lehetővé teszi a felhasználó számára, hogy kitalálja melyik számot generálta a program. Ha a
+# felhasználó nem találja el a számot akkor segítsen neki és mondja meg, hogy a
+# próbálkozásánál kisebb vagy nagyobb a generált szám. Készítsen a programhoz egy szöveges
+# menüt amiben a felhasználó a billentyűzettel beírt betűkkel tud az egyes menüpontokban
+# lépni. Menüpontok: New Game, Score, Difficulty, Quit. A Score menüponton eléri a
+# felhasználó az eddigi összes megnyert játékainak a számát (ehhez használjon filekezelést). A
+# Difficulty-n belül állítani lehet 3 nehézségi szintet, amelyek tetszőleges probálkozások számát
+# jelölik. (Pl. Easy – 10-szer próbálkozhat a felhasználó, hogy eltalálja a számot). A Quit menu
+# a játék bezárását eredményezi.
+
 import random
 score = open('Score.txt','a')
 
