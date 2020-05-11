@@ -80,3 +80,4 @@ while True:
         break
     elif click != 'q' and click != 'd' and click != 's' and click != 'n':
         print('Unsupported input')
+score.close()
